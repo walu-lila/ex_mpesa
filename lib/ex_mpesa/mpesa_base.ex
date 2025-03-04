@@ -85,7 +85,7 @@ defmodule ExMpesa.MpesaBase do
         {:error, message}
 
       _ ->
-        {:error, 'An Error occurred, try again'}
+        {:error, "An Error occurred, try again"}
     end
   end
 
