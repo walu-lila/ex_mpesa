@@ -11,7 +11,7 @@ defmodule ExMpesa.B2BTest do
   setup do
     mock(fn
       %{
-        url: "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials",
+        url: "https://sandbox.safaricom.co.ke/oauth/v2/generate?grant_type=client_credentials",
         method: :get
       } ->
         %Tesla.Env{
@@ -23,7 +23,7 @@ defmodule ExMpesa.B2BTest do
         }
 
       %{
-        url: "https://sandbox.safaricom.co.ke/mpesa/b2b/v1/paymentrequest",
+        url: "https://sandbox.safaricom.co.ke/mpesa/b2b/v2/paymentrequest",
         method: :post
       } ->
         %Tesla.Env{

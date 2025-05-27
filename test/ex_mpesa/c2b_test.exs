@@ -11,7 +11,7 @@ defmodule ExMpesa.C2BTest do
   setup do
     mock(fn
       %{
-        url: "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials",
+        url: "https://sandbox.safaricom.co.ke/oauth/v2/generate?grant_type=client_credentials",
         method: :get
       } ->
         %Tesla.Env{
@@ -23,7 +23,7 @@ defmodule ExMpesa.C2BTest do
         }
 
       %{
-        url: "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/registerurl",
+        url: "https://sandbox.safaricom.co.ke/mpesa/c2b/v2/registerurl",
         method: :post
       } ->
         %Tesla.Env{
@@ -35,7 +35,7 @@ defmodule ExMpesa.C2BTest do
           }
         }
 
-      %{url: "https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate", method: :post} ->
+      %{url: "https://sandbox.safaricom.co.ke/mpesa/c2b/v2/simulate", method: :post} ->
         %Tesla.Env{
           status: 200,
           body: %{

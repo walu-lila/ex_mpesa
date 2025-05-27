@@ -9,7 +9,7 @@ defmodule ExMpesa.TokenServerTest do
   setup do
     mock(fn
       %{
-        url: "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials",
+        url: "https://sandbox.safaricom.co.ke/oauth/v2/generate?grant_type=client_credentials",
         method: :get
       } ->
         %Tesla.Env{

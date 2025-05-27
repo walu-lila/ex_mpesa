@@ -39,7 +39,7 @@ defmodule ExMpesa.MpesaBase do
   end
 
   defp generate_token(client) do
-    case Tesla.get(client, "/oauth/v1/generate?grant_type=client_credentials")
+    case Tesla.get(client, "/oauth/v2/generate?grant_type=client_credentials")
          |> get_token do
       {:ok, token} ->
         #  added 3550 secs, 50 less normal 3600 in 1 hr
