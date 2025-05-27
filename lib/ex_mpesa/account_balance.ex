@@ -68,6 +68,6 @@ defmodule ExMpesa.AccountBalance do
       "ResultURL" => Application.get_env(:ex_mpesa, :balance)[:result_url]
     }
 
-    make_request("/mpesa/accountbalance/v1/query", payload)
+    make_request("/mpesa/accountbalance/v2/query", payload)
   end
 end

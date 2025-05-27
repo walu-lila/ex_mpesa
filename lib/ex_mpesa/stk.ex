@@ -71,7 +71,7 @@ defmodule ExMpesa.Stk do
       "TransactionDesc" => description
     }
 
-    make_request("/mpesa/stkpush/v1/processrequest", payload)
+    make_request("/mpesa/stkpush/v2/processrequest", payload)
   end
 
   def request(_) do
@@ -128,7 +128,7 @@ defmodule ExMpesa.Stk do
       "CheckoutRequestID" => checkout_request_id
     }
 
-    make_request("/mpesa/stkpushquery/v1/query", payload)
+    make_request("/mpesa/stkpushquery/v2/query", payload)
   end
 
   def validate(_) do

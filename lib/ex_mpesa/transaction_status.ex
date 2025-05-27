@@ -100,7 +100,7 @@ defmodule ExMpesa.TransactionStatus do
       "Occasion" => occasion
     }
 
-    make_request("/mpesa/transactionstatus/v1/query", payload)
+    make_request("/mpesa/transactionstatus/v2/query", payload)
   end
 
   defp query(_security_credential, _) do

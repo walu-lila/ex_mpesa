@@ -11,7 +11,7 @@ defmodule ExMpesa.StkTest do
   setup do
     mock(fn
       %{
-        url: "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials",
+        url: "https://sandbox.safaricom.co.ke/oauth/v2/generate?grant_type=client_credentials",
         method: :get
       } ->
         %Tesla.Env{
@@ -22,7 +22,7 @@ defmodule ExMpesa.StkTest do
           }
         }
 
-      %{url: "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest", method: :post} ->
+      %{url: "https://sandbox.safaricom.co.ke/mpesa/stkpush/v2/processrequest", method: :post} ->
         %Tesla.Env{
           status: 200,
           body:
@@ -35,7 +35,7 @@ defmodule ExMpesa.StkTest do
             })
         }
 
-      %{url: "https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v1/query", method: :post} ->
+      %{url: "https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v2/query", method: :post} ->
         %Tesla.Env{
           status: 200,
           body:
