@@ -94,7 +94,7 @@ defmodule ExMpesa.B2C do
       "Occassion" => occassion
     }
 
-    make_request("/mpesa/b2c/v2/paymentrequest", payload)
+    make_request("/mpesa/b2c/v1/paymentrequest", payload)
   end
 
   defp b2c_request(_security_credential, _) do

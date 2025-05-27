@@ -13,7 +13,7 @@ defmodule ExMpesa.ReversalTest do
   setup do
     mock(fn
       %{
-        url: "#{@base_url}/oauth/v2/generate?grant_type=client_credentials",
+        url: "#{@base_url}/oauth/v1/generate?grant_type=client_credentials",
         method: :get
       } ->
         %Tesla.Env{
@@ -24,7 +24,7 @@ defmodule ExMpesa.ReversalTest do
           }
         }
 
-      %{url: "#{@base_url}/mpesa/reversal/v2/request", method: :post} ->
+      %{url: "#{@base_url}/mpesa/reversal/v1/request", method: :post} ->
         %Tesla.Env{
           status: 200,
           body:

@@ -115,7 +115,7 @@ defmodule ExMpesa.B2B do
       "ResultURL" => Application.get_env(:ex_mpesa, :b2b)[:result_url]
     }
 
-    make_request("/mpesa/b2b/v2/paymentrequest", payload)
+    make_request("/mpesa/b2b/v1/paymentrequest", payload)
   end
 
   defp b2b_request(_security_credential, _) do

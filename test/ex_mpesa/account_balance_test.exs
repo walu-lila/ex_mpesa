@@ -11,7 +11,7 @@ defmodule ExMpesa.AccountBalanceTest do
   setup do
     mock(fn
       %{
-        url: "https://sandbox.safaricom.co.ke/oauth/v2/generate?grant_type=client_credentials",
+        url: "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials",
         method: :get
       } ->
         %Tesla.Env{
@@ -23,7 +23,7 @@ defmodule ExMpesa.AccountBalanceTest do
         }
 
       %{
-        url: "https://sandbox.safaricom.co.ke/mpesa/accountbalance/v2/query",
+        url: "https://sandbox.safaricom.co.ke/mpesa/accountbalance/v1/query",
         method: :post
       } ->
         %Tesla.Env{

@@ -49,7 +49,7 @@ defmodule ExMpesa.C2B do
       "ValidationURL" => validation_url
     }
 
-    make_request("/mpesa/c2b/v2/registerurl", payload)
+    make_request("/mpesa/c2b/v1/registerurl", payload)
   end
 
   def registerurl(%{}) do
@@ -98,7 +98,7 @@ defmodule ExMpesa.C2B do
       "BillRefNumber" => bill_reference
     }
 
-    make_request("/mpesa/c2b/v2/simulate", payload)
+    make_request("/mpesa/c2b/v1/simulate", payload)
   end
 
   def simulate(%{}) do

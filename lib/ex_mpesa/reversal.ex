@@ -102,6 +102,6 @@ defmodule ExMpesa.Reversal do
   end
 
   defp request_reversal(payload) do
-    make_request("/mpesa/reversal/v2/request", payload)
+    make_request("/mpesa/reversal/v1/request", payload)
   end
 end
